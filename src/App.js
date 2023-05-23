@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import Window from './Window';
 import './App.css';
+import asciiGraph from './asciiGraph';
+
+function x_linear(x) {
+  return x
+}
+
+function x_squared(x) {
+  return Math.pow(x,2)
+}
+
+var twenty_by_twenty = new Window(-10,10,-10,10,1);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>y = x</h1>
+      <p>{ asciiGraph(x_linear,twenty_by_twenty) }</p>
+
+      <h1>y = x^2</h1>
+      <p>{ asciiGraph(x_squared,twenty_by_twenty) }</p>
+
     </div>
   );
 }
