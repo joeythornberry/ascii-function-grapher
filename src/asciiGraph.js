@@ -1,7 +1,8 @@
 import Window from "./Window";
 
 function asciiGraph(f,window) {
-    return "ASCII GRAPHING FUNCTION NOT YET IMPLEMENTED";
+    var graph = "NOT\nYET\nIMPLEMENTED";
+    return <div class = "asciiGraph">{graph}</div>;
 } 
 
 export default asciiGraph;
