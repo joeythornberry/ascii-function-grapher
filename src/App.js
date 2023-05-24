@@ -22,7 +22,7 @@ function App() {
       {asciiGraph(x_squared,twenty_by_twenty)}
 
     </div>
-  );
+  )
 }
 
 export default App;
