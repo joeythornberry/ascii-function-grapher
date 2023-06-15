@@ -2,13 +2,15 @@ import Window from "./Window";
 
 function asciiGraph(f,window) {
     var graph = window.emptyGrid();
-    for(let x = -10; x < 10; x++) {
-        if(f(x - 1) - (f(x) + 0.5) > 0) {
+    for(let x = window.Xmin; x < window.Xmax; x++) {
+        if(f((window.Xscale * x) - window.Xscale) / window.Yscale - (f(window.Xscale * x) / window.Yscale + 
+        (window.Yscale * 0.5)) > 0) {
             var left_low = false
         } else {
             var left_low = true;
         }
-        if(f(x + 1) - (f(x) + 0.5) > 0) {
+        if(f((window.Xscale * x) + window.Xscale) - (f(window.Xscale * x) / window.Yscale + 
+        (window.Yscale * 0.5)) > 0) {
             var right_low = false
         } else {
             var right_low = true;
@@ -23,8 +25,9 @@ function asciiGraph(f,window) {
         } else if(!left_low && right_low) {
             new_character = "\\";
         }
-        if(f(x) < 10 && f(x) > -10) {
-            graph[10 - (f(x))][x + 10] = new_character;
+        if(f(window.Xscale * x) / window.Yscale < window.Ymax && f(window.Xscale * x) / window.Yscale > 
+        window.Ymin) {
+            graph[Math.round((-1 * window.Ymin) - (f(x * window.Xscale) / window.Yscale))][x - window.Xmin] = new_character;
         }
     } 
     let graph_string = "";
