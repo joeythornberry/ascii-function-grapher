@@ -1,5 +1,5 @@
 class Window {
-    constructor(Xmin,Xmax,Ymin,Ymax,scale) {
+    constructor(Xmin,Xmax,Ymin,Ymax,Xscale,Yscale) {
         if(Xmin > Xmax | Ymin > Ymax) {
             throw new Error("invalid parameters for window");
         } else {
@@ -7,7 +7,8 @@ class Window {
             this.Xmax = Xmax;
             this.Ymin = Ymin;
             this.Ymax = Ymax;
-            this.scale = scale;
+            this.Xscale = Xscale;
+            this.Yscale = Yscale;
         }
     }
      emptyGrid() {
@@ -19,11 +20,9 @@ class Window {
                         grid[y - this.Ymin].push("-")
                         } else if(x === 0) {
                             grid[y - this.Ymin].push("|")
-                        }
-                         else { 
+                        } else { 
                             grid[y - this.Ymin].push("0")
                         }
-                    
                      }
                 };
                 return grid;
