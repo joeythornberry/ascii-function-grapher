@@ -20,10 +20,10 @@ function App() {
   return (
     <div className="App">
       <h1>y = x</h1>
-      {asciiGraph(x_linear,twenty_by_twenty)}
+      {asciiGraph(x_linear,twenty_by_twenty,"blue")}
 
       <h1>y = x^3</h1>
-      {asciiGraph(x_cubed,twenty_by_twenty)}
+      {asciiGraph(x_cubed,twenty_by_twenty,"red")}
 
     </div>
   )
