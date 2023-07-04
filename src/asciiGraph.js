@@ -1,4 +1,5 @@
 import Window from "./Window";
+import GraphControl from "./GraphControl";
 
 function asciiGraph(f,window,function_color) {
     var graph = window.emptyGrid();
@@ -38,7 +39,8 @@ function asciiGraph(f,window,function_color) {
         }
         graph_string += "\n";
     }**/
-    return <div class = "asciiGraph">{
+    return <div class = "asciiGraph">
+        <GraphControl></GraphControl>{
         graph.map((line) => {return <div>{line}</div>})
     }</div>;
 } 

@@ -18,7 +18,7 @@ var twenty_by_twenty = new Window(-75,75,-75,75,0.1,1);
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style = {{backgroundColor: "black"}}>
       <h1>y = x</h1>
       {asciiGraph(x_linear,twenty_by_twenty,"blue")}
 

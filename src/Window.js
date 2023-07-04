@@ -17,11 +17,11 @@ class Window {
                 grid.push([])
                 for(let x = this.Xmin; x < this.Xmax; x++) {
                     if(y === 0) {
-                        grid[y - this.Ymin].push("-")
+                        grid[y - this.Ymin].push(<span style = {{color: "gray"}}>-</span>)
                         } else if(x === 0) {
-                            grid[y - this.Ymin].push("|")
+                            grid[y - this.Ymin].push(<span style = {{color: "gray"}}>|</span>)
                         } else { 
-                            grid[y - this.Ymin].push("0")
+                            grid[y - this.Ymin].push(<span style = {{color: "black"}}>0</span>)
                         }
                      }
                 };
