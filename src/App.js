@@ -1,6 +1,6 @@
 import Window from './Window';
 import './App.css';
-import asciiGraph from './asciiGraph';
+import AsciiGraph from './AsciiGraph';
 
 function x_linear(x) {
   return x
@@ -20,10 +20,7 @@ function App() {
   return (
     <div className="App" style = {{backgroundColor: "black"}}>
       <h1>y = x</h1>
-      {asciiGraph(x_linear,twenty_by_twenty,"blue")}
-
-      <h1>y = x^3</h1>
-      {asciiGraph(x_cubed,twenty_by_twenty,"red")}
+      <AsciiGraph f = {x_cubed} window = {twenty_by_twenty} function_color = "blue"></AsciiGraph>
 
     </div>
   )

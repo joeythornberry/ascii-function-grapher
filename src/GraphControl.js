@@ -1,7 +1,7 @@
 import React from 'react'; 
-import Button from '@material-ui/core/Button';
+import button from 'react';
 
-function GraphControl () {
-    return <Button style = {{color: "white"}}>hello joert</Button>
+function GraphControl (props) {
+    return <button style = {{color: "black"}} onClick = {props.onClick}>zoom</button>
 }
 export default GraphControl
